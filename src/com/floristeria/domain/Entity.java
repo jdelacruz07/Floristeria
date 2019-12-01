@@ -1,22 +1,19 @@
 package com.floristeria.domain;
 
 public abstract class Entity {
-
 	protected int id;
 	protected String name;
 	protected double price;
 	protected int stock;
-	private static int COUNTER = 1;
+	protected static int counter = 1;
 
 	public Entity(int id, String name, double price, int stock) {
-		
+		this.id = id;
+		this.name = name;
 		this.price = price;
 		this.stock = stock;
-		this.name = name;
-		this.id = id;
-		id = COUNTER;
-		COUNTER++;
-		
+		id = counter;
+		counter++;
 	}
 
 	public int getId() {
@@ -25,6 +22,14 @@ public abstract class Entity {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public double getPrice() {
@@ -43,31 +48,22 @@ public abstract class Entity {
 		this.stock = stock;
 	}
 
-	public static int getCOUNTER() {
-		return COUNTER;
+	public static int getCounter() {
+		return counter;
 	}
 
-	public static void setCOUNTER(int cOUNTER) {
-		COUNTER = cOUNTER;
+	public void setCounter(int counter) {
+		Entity.counter = counter;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	
-	
 	@Override
 	public String toString() {
-		return "ID: " + this.getId() + " | Article " + this.getName() +  " | Stock: " + this.getStock() 
-		+ " uds" + " | Preu: " + this.getPrice() + " € ";
+		return "ID: " + this.getId() + " | Article " + this.getName() + " | Stock: " + this.getStock() + " uds"
+				+ " | Preu: " + this.getPrice() + " € ";
 	}
 
 	public abstract void price();
+
 	public abstract void stock();
-	
+
 }
