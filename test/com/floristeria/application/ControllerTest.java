@@ -7,8 +7,8 @@ import java.util.List;
 import org.junit.Test;
 
 import com.floristeria.domain.Entity;
-import com.floristeria.domain.Stock;
 import com.floristeria.persistence.Repository;
+import com.floristeria.persistence.Stock;
 
 public class ControllerTest {
 

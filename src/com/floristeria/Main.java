@@ -3,7 +3,7 @@ package com.floristeria;
 import com.floristeria.application.Controller;
 import com.floristeria.domain.Entity;
 import com.floristeria.domain.Florist;
-import com.floristeria.domain.Stock;
+import com.floristeria.persistence.Stock;
 
 public class Main {
 

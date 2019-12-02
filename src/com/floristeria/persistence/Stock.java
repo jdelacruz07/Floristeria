@@ -1,4 +1,4 @@
-package com.floristeria.domain;
+package com.floristeria.persistence;
 
 import java.util.ArrayList;
 import java.util.List;
